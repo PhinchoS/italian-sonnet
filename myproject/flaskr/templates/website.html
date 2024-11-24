@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Poetry!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-image: url(https://i.pinimg.com/474x/06/42/33/064233c601e506f29f258c6be8f9b2aa.jpg);
+                background-size: 700px;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: center;
+                color: brown;
+                margin-top: 15%;
+                margin-bottom: 10%;
+                font-family: 'Cinzel', serif;
+                font-size: small;
+                font-weight: bold;
+            }
+            audio{
+                display: none;
+            }
+            .poem-line{
+                opacity: 0;
+                position: relative;
+                animation: flowIn 20s forwards ease-in-out, waveMove 10s infinite linear;
+                animation-delay: var(--delay);
+            }
+            @keyframes flowIn{
+                0%{
+                    opacity: 0;
+                    transform: translateX(-100px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            @keyframes waveMove{
+                0% { 
+                    transform: translateX(0); 
+                } 
+                25%{
+                    transform: translateX(-40px);
+                }
+                50% {
+                    transform: translateX(-20px); 
+                } 
+                75%{
+                    transform: translateX(40px);
+                }
+                100% {
+                     transform: translateX(0); 
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- background music -->
+        <audio id = "background-audio" autoplay>
+            <source src="https://youtu.be/n8J-Cp1bPgc?si=W_VUXQ1btmA3IQDi" type="audio/mp3">
+        </audio>
+        {% set i = 0%}
+        {% for line in my_poem %}
+            {% if line == "" %}
+            <!-- each line at a slower speed -->
+                <p></p>
+            {% else %}
+                <p class="poem-line" style="--delay: {{ i * 100 }}s">{{line}}</p>
+            {% endif %}
+            {% set i = i + 1%}
+        {% endfor %}
+        <!-- button to hear the poem -->
+        <button id = "speak-button" onclick="playAudioAndSpeak()">Ascolta il poesie</button>
+       
+        <script>
+            function playAudio(){
+                // audio in the background
+                var audio = document.getElementById('background-audio');
+                audio.play();
+            }
+            var synthesis = window.speechSynthesis; 
+            
+            function getVoices() { 
+                return synthesis.getVoices(); 
+            }
+            function playAudioAndSpeak(){
+                playAudio();
+                sayIt();
+            } 
+            
+            function sayIt() {
+                // generated poem is said out loud
+                var toSpeak = "{{ my_poem | join(' ') }}";
+                var voices = getVoices(); 
+                var italianVoice = null;
+
+                if (voices.length === 0) {
+                    synthesis.onvoiceschanged = function() {
+                        voices = getVoices(); 
+                        setVoice(voices); 
+                    };
+                } else {
+                    setVoice(voices); 
+                }
+                // set the Voice to Emma
+                function setVoice(voices) {
+                    for (var i = 0; i < voices.length; i++) {
+                        if (voices[i].name === "Emma" && voices[i].lang === "it-IT") {
+                            italianVoice = voices[i];
+                        }
+                    }
+                    // set to any Italian voice if Emma's voice is not found
+                    for (var i = 0; i < voices.length; i++) {
+                        if (voices[i].lang === "it-IT") {
+                            italianVoice = voices[i];
+                            break;
+                    }
+
+                    var utterance = new SpeechSynthesisUtterance(toSpeak);
+                    if (italianVoice) {
+                        utterance.voice = italianVoice;
+                    }
+                    
+                    //Voice properties
+                    utterance.pitch = 1.2;
+                    utterance.rate = 0.9;
+                    utterance.volume = 1.2;
+
+                    // Speak poem
+                    if ('speechSynthesis' in window) {
+                        synthesis.speak(utterance);
+                    } else {
+                        console.log('Text-to-speech not supported.');
+                    }
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
