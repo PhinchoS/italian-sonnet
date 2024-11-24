@@ -46,3 +46,6 @@ This paper inspired me on how to create a single line. Since I was only focused 
 https://books.google.com/books?hl=en&lr=&id=w6UzDwAAQBAJ&oi=fnd&pg=PA332&dq=generate+non+English+poems&ots=e-xPYwAY7D&sig=rtAmiD0mHPr39LSDFcDlWoEFZ0Y#v=onepage&q&f=false <br>
 Emotional Poetry Generator <br>
 In this they used newspaper and work of bertsolaritza as an inspiring set, which motivated me to use Dante's well known Vita Nuova as an inspiring set.
+
+https://www.florin.ms/DanteVitanova.pdf <br>
+Dante's Vita nouva peom used as a database.
