@@ -2,7 +2,7 @@
 # M7-Poetry Slam
 
 
-**Author**:Phincho Sherpa
+**Author**: Phincho Sherpa
 
 **Last Updated**: November 24th, 2024
 
