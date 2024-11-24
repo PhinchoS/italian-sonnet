@@ -32,13 +32,14 @@ I encountered in this project was the need to bring in a substantial amount of o
 
 ## Scholary Papers
 
-https://arxiv.org/pdf/2406.18906
-Generating and Evaluating Emotionally Resonant Poetry with Fine-Grained Sentiment Control
+https://arxiv.org/pdf/2406.18906 <br>
+Generating and Evaluating Emotionally Resonant Poetry with Fine-Grained Sentiment Control <br>
 This paper inspired me to use sentiment to evaluate the quality of generated sonnets because Petrach sonnets have positive emotions. It emphasizes  on how emotional undertones can affect the asthetic of a poem. 
 
-https://www.cambridge.org/core/journals/natural-language-engineering/article/multilingual-extension-and-evaluation-of-a-poetry-generator/21725A79692D38105E6E455A39F99526
-Multilingual Extension and Evaluation of a Poetry Generator
+https://www.cambridge.org/core/journals/natural-language-engineering/article/multilingual-extension-and-evaluation-of-a-poetry-generator/21725A79692D38105E6E455A39F99526 <br>
+Multilingual Extension and Evaluation of a Poetry Generator <br>
 This paper inspired me on how to create a single line. Since I was only focused on generating 14-line sonnets. The paper's dicussion on adapting poetry generation to different linguistic rules and structures helped me explore on using different sentence structure to format the lines. It created a more flexible and varied sentence structure.
 
-https://books.google.com/books?hl=en&lr=&id=w6UzDwAAQBAJ&oi=fnd&pg=PA332&dq=generate+non+English+poems&ots=e-xPYwAY7D&sig=rtAmiD0mHPr39LSDFcDlWoEFZ0Y#v=onepage&q&f=false
+https://books.google.com/books?hl=en&lr=&id=w6UzDwAAQBAJ&oi=fnd&pg=PA332&dq=generate+non+English+poems&ots=e-xPYwAY7D&sig=rtAmiD0mHPr39LSDFcDlWoEFZ0Y#v=onepage&q&f=false <br>
+Emotional Poetry Generator <br>
 In this they used newspaper and work of bertsolaritza as an inspiring set, which motivated me to use Dante's well known Vita Nuova as an inspiring set.
