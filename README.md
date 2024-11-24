@@ -6,13 +6,13 @@
 
 **Last Updated**: November 24th, 2024
 
-<img src="[https://media.tenor.com/j3tvsfkggVMAAAAM/soup-soup-time.gif](https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg)" width=100%>
+<img src="https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg" width=100%>
 
 **Title**: VitaSonnet
 ## Description
 This system is designed to create and evaluate Petrarchan/Italian sonnet. Petrarchan sonnet known for its structure, follows ABBAABBACDCDCD format and consists of 14 lines. It uses multiple libraries for Natural Processing Language(NLP) and setiment analysis create a peom. The database of words and phrases are inspired by collection of poems in _Vita Nuova_ by Dante Alighieri, widely regarded as the father of the Italian language. It provides a strong foundation reflecting the themes of love, longing, and spiritual contemplation that characterizes much of Petrarchan poetry. Through the sentiment analysis, it analyzes the tone and mood for the languages. 
 
-##Set up
+## Set up
 
 Install:
 pip install spacy
@@ -25,12 +25,12 @@ python -m nltk.downloader vader_lexicon wordnet omw-1.4
 
 pip install vaderSentiment
 
-##Challenges
+## Challenges
 
 I encountered in this project was the need to bring in a substantial amount of outside knowledge, particularly realted to the Italian language. Most of the well-established NLP libraries tend to have better support and datasets for English. I could not yet find the solution of finding right rhyme with Italian words because it depended on the phonetic sounds of the words, which is different between all languages. I could not find a way in which these could be coded. Furthermore while I could rely on Dante's Vita Nuova as a source of inspiration, the vocabulary and understanding is different from modern Italian. This experience helped me undertand the importace of understanding cultural and linguistic context when developing language models other than English.
 
 
-##Scholary Papers
+## Scholary Papers
 
 https://arxiv.org/pdf/2406.18906
 Generating and Evaluating Emotionally Resonant Poetry with Fine-Grained Sentiment Control
