@@ -1,4 +1,4 @@
-# italian-sonnet
+# Italian-sonnet
 # M7-Poetry Slam
 
 
@@ -14,7 +14,7 @@ This system is designed to create and evaluate Petrarchan/Italian sonnet. Petrar
 
 ## Set up
 
-Install:
+Install: <br>
 pip install spacy
 python -m spacy download en_core_web_sm
 
