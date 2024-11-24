@@ -6,7 +6,7 @@
 
 **Last Updated**: November 24th, 2024
 
-<img src="https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg" width=100%>
+<img src="https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg" width=25%>
 
 **Title**: VitaSonnet
 ## Description
