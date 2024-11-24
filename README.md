@@ -12,7 +12,7 @@
 ## Description
 This system is designed to create and evaluate Petrarchan/Italian sonnet. Petrarchan sonnet known for its structure, follows ABBAABBACDCDCD format and consists of 14 lines. It uses multiple libraries for Natural Processing Language(NLP) and setiment analysis create a peom. The database of words and phrases are inspired by collection of poems in _Vita Nuova_ by Dante Alighieri, widely regarded as the father of the Italian language. It provides a strong foundation reflecting the themes of love, longing, and spiritual contemplation that characterizes much of Petrarchan poetry. Through the sentiment analysis, it analyzes the tone and mood for the languages. 
 
-## Set up
+## Set up and how to run
 
 Install: <br>
 pip install spacy
@@ -24,6 +24,9 @@ pip install nltk
 python -m nltk.downloader vader_lexicon wordnet omw-1.4
 
 pip install vaderSentiment
+
+In the terminal enter flask --app flaskr run --debug 
+and in Google Chrome open http://127.0.0.1:5000
 
 ## Challenges
 
