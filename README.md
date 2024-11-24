@@ -16,7 +16,7 @@ This system is designed to create and evaluate Petrarchan/Italian sonnet. Petrar
 
 Install: <br>
 pip install spacy
-python -m spacy download en_core_web_sm
+python -m spacy download it_core_web_sm
 
 pip install pronouncing
 
